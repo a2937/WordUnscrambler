@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args)
     {
-        WordUnscrambler wordUnscrambler = new WordUnscrambler("G:\\WordUnscrambler\\wordlist.txt");
+        WordUnscrambler wordUnscrambler = new WordUnscrambler(Main.class.getResource("/edu/wvup/acottri9/dictionary/wordlist.txt").getFile() );
         Scanner scanner = new Scanner(System.in);
        System.out.println("What is the word to unscramble?");
 

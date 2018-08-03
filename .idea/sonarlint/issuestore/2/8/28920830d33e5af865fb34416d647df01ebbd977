@@ -1,7 +1,0 @@
-
-V
-squid:S106("9Replace this use of System.out or System.err by a logger.(ˆ Ü8½ô®çÌ,
-Msquid:S00108M")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ8˜§ÖçÌ,
-ysquid:S3923B"[Remove this conditional structure or edit its code blocks so that they're not all the same.(ñ”ø—8Ø¿ÕçÌ,
-Msquid:S00108C")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ8ÒÉÂçÌ,
-Msquid:S00108G")Either remove or fill this block of code.(ÒÌâ–øÿÿÿÿ8Ø¿ÕçÌ,
