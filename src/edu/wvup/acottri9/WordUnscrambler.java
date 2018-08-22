@@ -17,17 +17,32 @@ public class WordUnscrambler
 
     }
 
-
     public WordUnscrambler(String fileName)
     {
         setFileName(fileName);
     }
 
+    public WordUnscrambler(File file)
+    {
+        prepareDictionary(file);
+    }
 
     public String getFileName()
     {
         return fileName;
     }
+
+    private void prepareDictionary(File file)
+    {
+        try {
+            scanner = new Scanner(file);
+            initializeDictionary();
+        } catch (FileNotFoundException e)
+        {
+            LOGGER.log( Level.SEVERE,e.toString());
+        }
+    }
+
 
     public void setFileName(String fileName)
     {
@@ -35,13 +50,9 @@ public class WordUnscrambler
         {
 
             this.fileName = fileName;
-            try {
-                scanner = new Scanner(new File(fileName));
-                initializeDictionary();
-            } catch (FileNotFoundException e)
-            {
-                LOGGER.log( Level.SEVERE,e.toString());
-            }
+            File file = new File(fileName.replace("%20"," "));
+            prepareDictionary(file);
+
         }
 
     }
